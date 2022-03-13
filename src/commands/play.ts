@@ -62,7 +62,7 @@ Realizando download... ⌛`
     getRandomName("mp3")
   );
 
-  ytdl("http://www.youtube.com/watch?v=aqz-KE-bpKQ")
+  ytdl(video.url)
     .pipe(fs.createWriteStream(tempFile))
     .on("finish", async () => {
       await sendAudio(tempFile, true, false);
