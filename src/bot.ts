@@ -1,16 +1,14 @@
-import { IAntiFake } from "./interfaces/IAntiFake";
 import path from "path";
-
+import { general } from "./configurations/general";
+import { connect } from "./connection";
 import {
+  detectLink,
   getBotData,
   getCommand,
   isCommand,
-  detectLink,
   readJSON,
 } from "./functions";
-
-import { connect } from "./connection";
-import { general } from "./configurations/general";
+import { IAntiFake } from "./interfaces/IAntiFake";
 
 export default async () => {
   const socket = await connect();

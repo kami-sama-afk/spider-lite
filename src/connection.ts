@@ -2,7 +2,6 @@ import makeWaSocket, {
   DisconnectReason,
   useSingleFileAuthState,
 } from "@adiwajshing/baileys";
-
 import { Boom } from "@hapi/boom";
 
 export const connect = async () => {

@@ -1,9 +1,3 @@
-import { IAntiLink } from "./interfaces/IAntiLink";
-import fs from "fs";
-import path from "path";
-
-import { writeFile } from "fs/promises";
-
 import {
   DownloadableMessage,
   downloadContentFromMessage,
@@ -11,9 +5,12 @@ import {
   isJidGroup,
   proto,
 } from "@adiwajshing/baileys";
-
-import { IBotData } from "./interfaces/IBotData";
+import fs from "fs";
+import { writeFile } from "fs/promises";
+import path from "path";
 import { general } from "./configurations/general";
+import { IAntiLink } from "./interfaces/IAntiLink";
+import { IBotData } from "./interfaces/IBotData";
 
 export const getBotData = (
   socket: any,
