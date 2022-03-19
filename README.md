@@ -44,9 +44,7 @@ npm test
 
 👤 **Aldebaran**
 
-- Website: https://guiireal.com
 - Github: [@guiireal](https://github.com/guiireal)
-- LinkedIn: [@guiireal](https://linkedin.com/in/guiireal)
 - WhatsApp: [+5511996122056](wa.me/5511996122056)
 
 <br/>
