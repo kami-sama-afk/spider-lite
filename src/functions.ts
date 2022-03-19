@@ -7,6 +7,7 @@ import {
 } from "@adiwajshing/baileys";
 import fs from "fs";
 import { writeFile } from "fs/promises";
+import fetch from "node-fetch";
 import path from "path";
 import { general } from "./configurations/general";
 import { IAntiLink } from "./interfaces/IAntiLink";
@@ -524,3 +525,16 @@ export const detectLink = async (botData: IBotData) => {
 
   await sendText("Banido por envio de link! ⛔");
 };
+
+export async function getBuffer(url: string) {
+  const res = await fetch(url, {
+    headers: { "User-Agent": "okhttp/4.5.0" },
+    method: "GET",
+  });
+
+  const buff = await res.buffer();
+
+  if (buff) return { type: res.headers.get("content-type"), result: buff };
+
+  return { type: res.headers.get("content-type"), result: "Error" };
+}
