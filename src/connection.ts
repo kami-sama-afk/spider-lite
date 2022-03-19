@@ -3,10 +3,11 @@ import makeWaSocket, {
   useSingleFileAuthState,
 } from "@adiwajshing/baileys";
 import { Boom } from "@hapi/boom";
+import path from "path";
 
 export const connect = async () => {
   const { state, saveState } = useSingleFileAuthState(
-    "./cache/auth_info_multi.json"
+    path.resolve(__dirname, "..", "cache", "auth_info_multi.json")
   );
 
   const socket = makeWaSocket({
