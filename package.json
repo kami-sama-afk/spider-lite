@@ -15,7 +15,6 @@
   "dependencies": {
     "@adiwajshing/baileys": "github:adiwajshing/baileys",
     "@hapi/boom": "^9.1.4",
-    "ansi-regex": ">=5.0.1",
     "axios": "^0.26.1",
     "fluent-ffmpeg": "^2.1.2",
     "node-fetch": "^2.6.6",
